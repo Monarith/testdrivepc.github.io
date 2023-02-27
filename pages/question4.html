@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- គ្រាន់តែជាកម្មវិធីសាកល្បងបង្កើតឡើងជាមួយ CSS និង Scripts បន្តិចបន្តួច
+	គ្មាន DB ទេ ។ មិនទាន់អាចបូកពិន្ទុបាន
+	បង្កើតឡើងសម្រាប់តែសិស្សដែលមិនសូវចេះកុំព្រូទ័ររៀនចុចឲ្យស្ទាត់កុំព្យូទ័រ
+	ដើម្បីត្រៀមប្រឡង។ សូមអធ្យាស្រ័យទុកជាមុនបើសិនជាមានការខុសឆ្គង-->
+	<meta charset="UTF-8">
+	<title>ប្រឡងសាកល្បង</title>
+	<link href="../Images/logo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/feea2cd722.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<style type="text/css"></style>
+</head>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-primary">
+		<img src="../Images/logo.png" alt=""><span>&nbsp;ប្រឡងបណ្ណបើកបរសាកល្បង</span>
+		<div class="collapse navbar-collapse" id="main_nav">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+				   <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: white;">សុក្រ ចន្ទ  <i class="fa-solid fa-angle-down"></i></a>
+				    <ul class="dropdown-menu">
+					  <li><a class="dropdown-item" href="../index.html"> ចាកចេញ</a></li>
+				    </ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<body>
+	<div class="info-contain">
+		<div class="info-first-row" style="height: 30px;">
+			<div class="info-label-left">
+				<div style="margin-top: 5px;">
+					<p>លេខសំរាប់ធ្វើតេស្ត </p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div style="margin-top: 5px;">
+					<div style="margin-left: 10px;" id = "lblData"></div>
+				</div>
+				
+			</div>
+			<div class="info-label-right">
+				<div style="margin-top: 5px;">
+					<p>ម៉ោងចាប់ផ្ដើម </p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div style="margin-top: 5px;">
+					<div style="margin-left: 10px;">08:00</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="info-second-row" style="height: 30px;margin-top: 10px;">
+			<div class="info-label-left">
+				<div style="margin-top: 5px;">
+					<p>ឈ្មោះជាភាសាខ្មែរ </p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div style="margin-top: 5px;">
+					<div style="margin-left: 10px;">
+						<p>សុក្រ ចន្ទ</p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="info-label-right">
+				<div style="margin-top: 5px;">
+					<p>ម៉ោងបញ្ចប់ </p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div style="margin-top: 5px;">
+					<div style="margin-left: 10px;">09:00</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="info-third-row" style="height: 30px;margin-top: 10px;">
+			<div class="info-label-left">
+				<div style="margin-top: 5px;">
+					<p>ឈ្មោះជាឡាតាំង </p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div style="margin-top: 5px;">
+					<div style="margin-left: 10px;">
+						<p>SOK CHAN</p>
+					</div>
+				</div>
+				
+			</div>
+			<div class="info-label-right">
+				<div style="margin-top: 5px;">
+					<p>ម៉ោងនៅសល់</p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div style="margin-top: 5px;">
+					<div style="margin-left: 10px;color: red;" id="time">40:00</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="info-fourth-row" style="height: 30px;margin-top: 10px;">
+			<div class="info-label-left">
+				<div style="margin-top: 5px;">
+					<p>ប្រភេទបណ្ណបើកបរ </p>
+				</div>
+			</div>
+			<div class="info-box">
+				<div style="margin-top: 5px;">
+					<div style="margin-left: 10px;">
+						<p>B</p>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="Up-button" style="margin-top: 40px; float: right;">
+			<button id="stop-exam" class="stop-ex">
+				បញ្ចប់&nbsp;<i class="fa-solid fa-check"></i>
+			</button>
+		</div>
+		<div class="q-number">
+			សំណួរទី: 04 / 40
+		</div>
+	</div>
+	
+	<div class="question-container">
+		<div class="row-1" style="width: 1142px; height: 30px;">
+			<div class="sound-control" style="width: 380px; float: left;">
+				<button id="sound-on" class="sound-on-button">
+					<i class="fa-solid fa-volume-high"></i>&nbsp; បើកសម្លេងនិយាយ
+				</button>
+				<button id="sound-off" class="sound-off-button">
+					<i class="fa-solid fa-volume-xmark"></i>&nbsp; បិទសម្លេងនិយាយ
+				</button>
+			</div>
+			<div class="que-control" >
+				<button id="last-que" class="back-button">
+					<i class="fa-solid fa-backward-step"></i>&nbsp; ត្រឡប់ក្រោយ
+				</button>
+				<button id="next-que" class="next-button">
+					 បន្ទាប់&nbsp;<i class="fa-solid fa-forward-step"></i>
+				</button>
+			</div>
+		</div>
+		<div class="quiz-area" style="width: 1000px; ">
+			<div class="que-ch"​ >
+				<p ><i class="fa-solid fa-circle-play" href="#"></i>&nbsp;ពេលជួបប្រទះផ្លាកសញ្ញាហាមបត់ឆ្វេង តើអាចបត់ត្រឡប់ក្រោយបានឬទេ?</p>
+			</div>
+			<div class="quiz-blog">
+				<div class="answer-ch">
+					<div class="answer-a">
+						<button onclick="document.getElementById('ch-a').style.backgroundColor='#26537a'; document.getElementById('ch-b').style.backgroundColor='white';document.getElementById('ch-c').style.backgroundColor='white';document.getElementById('ch-a').style.color='white';document.getElementById('ch-b').style.color='black';document.getElementById('ch-c').style.color='black';" id="ch-a" class="answer-button a-button">
+							ជ្រើសរើស(ក)
+						</button>
+						<span​​ style="margin-left: 20px;">
+							<i class="fa-solid fa-circle-play" href="#"></i>&nbsp;ក.&nbsp;មិនបានទេ
+						</span>
+					</div>
+					<div class="answer-b">
+						<button onclick="document.getElementById('ch-b').style.backgroundColor='#26537a'; document.getElementById('ch-a').style.backgroundColor='white';document.getElementById('ch-c').style.backgroundColor='white';document.getElementById('ch-b').style.color='white';document.getElementById('ch-a').style.color='black';document.getElementById('ch-c').style.color='black';" id="ch-b" class="answer-button b-button">
+							ជ្រើសរើស(ខ)
+						</button>
+						<span​​ style="margin-left: 20px;">
+							<i class="fa-solid fa-circle-play" href="#"></i>&nbsp;ខ.&nbsp;នៅពេលស្ងាត់អាចបត់បាន 
+						</span>
+					</div>
+					<div class="answer-c">
+						<button onclick="document.getElementById('ch-c').style.backgroundColor='#26537a'; document.getElementById('ch-b').style.backgroundColor='white';document.getElementById('ch-a').style.backgroundColor='white';document.getElementById('ch-c').style.color='white';document.getElementById('ch-b').style.color='black';document.getElementById('ch-a').style.color='black';" id="ch-c" class="answer-button c-button">
+							ជ្រើសរើស(គ)
+						</button>
+						<span​​ style="margin-left: 20px; font-family: main_font;">
+							<i class="fa-solid fa-circle-play" href="#"></i>&nbsp;គ.&nbsp;អាចបាន 
+						</span>
+					</div>
+				</div>
+				<div class="que-img" >
+					<img style="height: 150px;" src="../Images/no-img.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="note" >
+		<p style="margin-left: 20px; ">ចំណាំ : ពណ៌ខៀវជាចម្លើយដែលលោកអ្នកបានជ្រើសរើស!</p>
+	</div>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/style.js"></script>
+<!-- Query get passcode from loin -->
+	<script type="text/javascript">
+	    var queryString = new Array();
+	    $(function () {
+	        if (queryString.length == 0) {
+	            if (window.location.search.split('?').length > 1) {
+	                var params = window.location.search.split('?')[1].split('&');
+	                for (var i = 0; i < params.length; i++) {
+	                    var key = params[i].split('=')[0];
+	                    var value = decodeURIComponent(params[i].split('=')[1]);
+	                    queryString[key] = value;
+	                }
+	            }
+	        }
+	        if (queryString["screen"] != null) {
+	            var data = queryString["screen"] ; 
+	            $("#lblData").html(data);
+	        }
+	    });
+	</script>
+<!-- End query get passcode from loin -->
+<!-- Time remaining -->
+	<script>
+			function startTimer(duration, display) {
+			    var timer = duration, minutes, seconds;
+			    setInterval(function () {
+			        minutes = parseInt(timer / 60, 10);
+			        seconds = parseInt(timer % 60, 10);
+
+			        minutes = minutes < 10 ? "0" + minutes : minutes;
+			        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+			        display.textContent = minutes + ":" + seconds;
+
+			        if (--timer < 0) {
+			            timer = duration;
+			        }
+			    }, 1000);
+			}
+
+			window.onload = function () {
+			    var fortyMinutes = 60 * 40,
+			        display = document.querySelector('#time');
+			    startTimer(fortyMinutes, display);
+			};
+		
+	</script>
+<!-- End Time remainig -->
+	<script type="text/javascript">
+			    document.getElementById("next-que").onclick = function () {
+				  	
+				  		var cod = queryString["screen"] ;
+				  		// alert(cod);
+				  		var url = "question5.html?screen=" + cod;
+			            window.location.href = url;
+				  		// window.location='Pages/Check.html';
+				  
+			    };
+	</script>
+	<script type="text/javascript">
+		    document.getElementById("last-que").onclick = function () {
+			  	
+			  		var cod = queryString["screen"] ;
+			  		// alert(cod);
+			  		var url = "question3.html?screen=" + cod;
+		            window.location.href = url;
+			  		// window.location='Pages/Check.html';
+			  
+		    };
+	</script>
+</body>
+</html>

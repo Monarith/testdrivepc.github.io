@@ -1,0 +1,302 @@
+@font-face{
+			font-family: main_font;
+			src: url('../fonts/KhmerOSbattambang_0.ttf');
+		}
+		*{
+			margin: 0; padding: 0;
+		}
+.navbar{
+
+  font-family: main_font;
+  background-color: #2d5f8b;
+}
+.navbar > img {
+  margin-top: 4px;
+  height: 40px;
+}
+.navbar > span{
+  color: white;
+  font-weight: bold;
+}
+.caption{
+  font-family: main_font;
+  font-size: ;
+  text-align: center;
+  margin-top: 50px;
+}
+.passcode-section{
+  background: white;
+  width: 470px;
+  height: 385px;
+  margin: 20px auto;
+  /*box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);*/
+}
+.test-id{
+  font-family: main_font;
+  font-weight: bold;
+  text-align: center;
+  width: 466px;
+  height: 50px;
+  padding: auto;
+  border: groove 2px;
+  margin: 2px 1px auto;
+}
+.digit{
+  width: 154px;
+  padding: 20px;
+  font-family: main_font;
+  font-size: 14px;
+  text-align: center;
+  height: 70px;
+  border: groove 2px;
+  float: left;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1px;
+}
+.digit:hover{
+  background-color: #f0f0f0;
+}
+.clear-output{
+  width: 154px;
+  padding: 20px;
+  font-family: main_font;
+  font-size: 14px;
+  text-align: center;
+  height: 70px;
+  border: groove 2px;
+  float: left;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1px;
+}
+.clear-output:hover{
+  background-color: #f0f0f0;
+}
+.login-click{
+  width: 154px;
+  padding: 20px;
+  font-family: main_font;
+  font-size: 14px;
+  text-align: center;
+  height: 70px;
+  border: groove 2px;
+  float: left;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background-color: #2d5f8b;
+  margin: 1px;
+}
+.login-click:hover{
+  background-color: #26537a;
+}
+/*check site*/
+
+.msgbox{
+  height: 20px;
+  margin-top: 130px;
+  font-family: main_font;
+  color: red;
+  text-align: center;
+}
+@media all and (min-width: 992px) {
+      .navbar .nav-item .dropdown-menu{ display: none; }
+      .navbar .nav-item:hover .nav-link{ text-decoration: none; }
+      .navbar .nav-item:hover .dropdown-menu{ display: block; }
+      .navbar .nav-item .dropdown-menu{ margin-top:0; }
+      .collapse{
+        float: right;
+        margin-right: 15px;
+        font-family: main_font;
+
+      }
+    }
+.nav-item{
+  margin-top: 15px;
+  color: white;
+}
+.info-contain{
+  font-family: main_font;
+  font-weight: bold;
+  font-size: 13px;
+  width: 763px;
+  height: 260px; 
+  margin: auto;
+}
+.startexam{
+  color: white;
+  text-align: center;
+  font-family: main_font;
+  font-weight: bold;
+  width: 200px;
+  height: 40px;
+  background-color: blue;
+  cursor: pointer;
+}
+.info-box{
+  border: groove 2px;
+  width: 200px; 
+  height: 30px; 
+  float: left;
+}
+.info-label-right{
+  width: 170px; 
+  height: 30px;
+  float: left;
+  margin-left: 20px;
+}
+.info-label-left{
+  width: 170px; 
+  height: 30px;
+  float: left;
+}
+.stop-ex {
+  width: 90px;
+  height: 40px;
+  background-color: #f93e3e;
+  color: white;
+  font-family: main_font;
+  font-weight: bold;
+  border: groove 2px;
+}
+.stop-ex:hover{
+  background-color: #db3636;
+}
+.start-ex {
+  font-weight: bold;
+  width: 160px;
+  height: 40px;
+  background-color: #62b24d;
+  color: white;
+  font-family: main_font;
+  border: groove 2px;
+}
+.start-ex:hover{
+  background-color:#3e9f31;
+}
+.question-container{
+  width: 1163px; 
+  height: 300px;  
+  margin:auto;
+}
+.sound-on-button {
+  width: 130px;
+  height: 25px;
+  background-color: white;
+  color: black;
+  font-family: main_font;
+  font-weight: bold;
+  font-size: 10px;
+  border: groove 2px;
+}
+.q-number{
+  width: 150px; 
+  margin:auto; 
+  margin-top: 90px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.sound-on-button:hover{
+  background-color: #f0f0f0;
+
+}
+.sound-off-button {
+  width: 130px;
+  height: 25px;
+  background-color: #2d5f8b;
+  color: white;
+  font-family: main_font;
+  font-weight: bold;
+  font-size: 10px;
+  font-weight: bold;
+  border: groove 2px;
+}
+.sound-off-button:hover{
+  background-color: #26537a;
+}
+.back-button {
+  width: 130px;
+  height: 35px;
+  background-color: white;
+  color: black;
+  font-family: main_font;
+  font-size: 13px;
+  font-weight: bold;
+  border: groove 2px;
+}
+.back-button:hover{
+  background-color: #f0f0f0;
+}
+.next-button {
+  width: 80px;
+  height: 35px;
+  background-color: #62b24d;
+  color: white;
+  font-family: main_font;
+  font-size: 13px;
+  font-weight: bold;
+  border: groove 2px;
+}
+.next-button:hover {
+  background-color:#3e9f31;
+}
+.answer-button {
+  width: 130px;
+  height: 35px;
+  background-color: white;
+  font-family: main_font;
+  font-size: 13px;
+  font-weight: bold;
+  border: groove 2px;
+}
+.answer-button:hover{
+  background-color: #f0f0f0;
+}
+.answer-a, .answer-b, .answer-c {
+  margin-bottom: 10px;
+}
+.answer-a, .answer-b, .answer-c > span{
+  font-family: main_font; 
+}
+.que-control{
+  width: 300px; 
+  height: 50px; 
+  margin-left: 400px;  
+  float: left;
+}
+.que-ch{
+  width: 800px; 
+  font-family: main_font; 
+  font-weight: bold;
+  float: left;
+  font-size: 15px;
+}
+.quiz-blog{
+  width: 1100px; 
+  height: 170px; 
+  float: left;
+}
+.answer-ch{
+  width: 600px;
+  height: 150px; 
+  float: left;
+  font-weight: bold;
+  font-size: 15px;
+}
+.que-img{
+  margin-left: 780px;
+  width: 190px;
+  height: 170px;
+}
+.note{
+  height: 30px; 
+  border-left: solid 3px #26537a; 
+  margin-left: 170px; 
+  font-family: main_font;
+  font-weight: bold;
+  font-size: 14px;
+}
+.qe2{
+  display: none;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- គ្រាន់តែជាកម្មវិធីសាកល្បងបង្កើតឡើងជាមួយ CSS និង Scripts បន្តិចបន្តួច
+	គ្មាន DB ទេ ។ មិនទាន់អាចបូកពិន្ទុបាន
+	បង្កើតឡើងសម្រាប់តែសិស្សដែលមិនសូវចេះកុំព្រូទ័ររៀនចុចឲ្យស្ទាត់កុំព្យូទ័រ
+	ដើម្បីត្រៀមប្រឡង។ សូមអធ្យាស្រ័យទុកជាមុនបើសិនជាមានការខុសឆ្គង-->
+	<meta charset="UTF-8">
+	<title>ប្រឡងសាកល្បង</title>
+	<link href="Images/logo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<style type="text/css"></style>
+</head>
+<header>
+	<nav class="navbar navbar-expand-lg navbar-primary">
+		<img src="Images/logo.png" alt=""><span>&nbsp;ប្រឡងបណ្ណបើកបរសាកល្បង</span>
+	</nav>
+</header>
+<body>
+	<div class="caption">
+		<h3>សូមបញ្ចូលលេខសំរាប់ធ្វើតេស្តដែលនៅលើបណ្ណរបស់អ្នក</h3>
+		<h4>Please input the "Test ID" from your application form</h4>
+	</div>
+<form name="pass">	
+	<div class="passcode-section">
+		<input id="output" name="screen" class="test-id" type="text" placeholder="បញ្ចូលលេខសម្ងាត់/Test ID">
+		<div class="num-pad">
+			<div class="first-row">
+				<div onclick = "pass.screen.value += '1' " class="digit" ">1</div>
+				<div onclick = "pass.screen.value += '2' " class="digit" ">2</div>
+				<div onclick = "pass.screen.value += '3' " class="digit" ">3</div>
+			</div>
+			<div class="second-row">
+				<div onclick = "pass.screen.value += '4' " class="digit" ">4</div>
+				<div onclick = "pass.screen.value += '5' " class="digit" ">5</div>
+				<div onclick = "pass.screen.value += '6' " class="digit" ">6</div>
+			</div>
+			<div class="third-row">
+				<div onclick = "pass.screen.value += '7' " class="digit" ">7</div>
+				<div onclick = "pass.screen.value += '8' " class="digit" >8</div>
+				<div onclick = "pass.screen.value += '9' " class="digit" >9</div>
+			</div>
+			<div class="fourth-row">
+				<div onclick="document.getElementById('output').value = ''" class="clear-output" >សំអាត<br>Clear</div>
+				<div onclick = "pass.screen.value += '0' " class="digit" >0</div>
+				<div class="login-click" >ចូលកម្មវិធី<br>Login</div>
+			</div>
+		</div>
+	</div>
+</form>
+	<div id="msg" class="msgbox">
+		<p id="wrong-pass-alert" ></p>
+	</div>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/style.js"></script>
+	<script>
+		$('.login-click').on('click', function() {
+			var pss = document.getElementById('output').value;
+			var stm = "សូមបញ្ចូលលេខសម្គាល់ខ្លួនឲ្យបានត្រឹមត្រូវ";
+		  	if(pss==''){
+				document.getElementById('wrong-pass-alert').innerHTML = stm;
+				document.getElementById("msg").style.backgroundColor = "#ffe1dc";
+
+				
+		  	}
+		  	else{
+		  		var url = "pages/check.html?screen=" + encodeURIComponent($("#output").val());
+	            window.location.href = url;
+		  		// window.location='Pages/Check.html';
+		  	}
+		});
+		
+	</script>
+</body>
+</html>
